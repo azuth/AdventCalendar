@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Advent Calendar</string>
+    <string name="openDoorPermissionDenied">Its still not time to open door %s.</string>
+
+
+    <string name="door1">test</string>
+    <string name="door2" />
+    <string name="door3" />
+    <string name="door4" />
+    <string name="door5" />
+    <string name="door6" />
+    <string name="door7" />
+    <string name="door8" />
+    <string name="door9" />
+    <string name="door10" />
+    <string name="door11" />
+    <string name="door12" />
+    <string name="door13" />
+    <string name="door14" />
+    <string name="door15" />
+    <string name="door16" />
+    <string name="door17" />
+    <string name="door18" />
+    <string name="door19" />
+    <string name="door20" />
+    <string name="door21" />
+    <string name="door22" />
+    <string name="door23" />
+    <string name="door24" />
+
+
+</resources>
