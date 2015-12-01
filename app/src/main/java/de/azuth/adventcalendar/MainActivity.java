@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         settings = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
@@ -40,16 +42,16 @@ public class MainActivity extends AppCompatActivity {
         String doorNumber = ((Button) view).getText().toString();
         Calendar c = Calendar.getInstance();
 
-        /*
+
         if( !( Integer.parseInt(doorNumber) <= c.get(Calendar.DAY_OF_MONTH)
                && c.get(Calendar.MONTH)>10 )){ // Calendar.MONTH [0-11]
             Log.d("openDoor", "Its still not time to open door "+doorNumber+".");
             String message = String.format(getString(R.string.openDoorPermissionDenied), doorNumber);
             Toast.makeText(getApplicationContext(), message,
-            Toast.LENGTH_LONG).show();
+                    Toast.LENGTH_LONG).show();
             return;
         }
-        */
+
 
         int count = settings.getInt(doorNumber, 0);
         settings.edit().putInt(doorNumber, ++count).commit();
